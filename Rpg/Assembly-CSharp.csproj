@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\PersController.cs" />
      <Compile Include="Assets\Scripts\Control.cs" />
+     <None Include="Assets\Fantasy Forest Environment Free Sample\StandardNoCulling.shader" />
      <None Include="Assets\Информация.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Пользователь/Desktop/Game_Dev/-/Rpg/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
