@@ -53,8 +53,7 @@ public class Control : MonoBehaviour
         	Jump = Input.GetAxis("Jump") * Time.deltaTime * jumpSpeed;
         	GetComponent<Rigidbody>().AddForce(transform.up * Jump, ForceMode.Impulse);
     	}
-
-        transform.Translate(new Vector3(Hor, 0, Ver));
+    	transform.Translate(new Vector3(Hor, 0, Ver));
 
     }
 }
