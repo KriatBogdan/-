@@ -56,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Control.cs" />
-     <None Include="Assets\Fantasy Forest Environment Free Sample\StandardNoCulling.shader" />
+     <Compile Include="Assets\Scripts\Menu.cs" />
      <None Include="Assets\Информация.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Пользователь/Desktop/Game_Dev/-/Rpg/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
