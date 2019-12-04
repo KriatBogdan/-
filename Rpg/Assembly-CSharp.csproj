@@ -56,7 +56,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Control.cs" />
+     <Compile Include="Assets\Scripts\DungeonCamera.cs" />
+     <Compile Include="Assets\Scripts\FollowCamera.cs" />
+     <Compile Include="Assets\Scripts\LookAtCamera.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
+     <Compile Include="Assets\Scripts\MouseAimCamera.cs" />
+     <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <None Include="Assets\Информация.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Пользователь/Desktop/Game_Dev/-/Rpg/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
