@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class Control : MonoBehaviour
 {
-	public GameObject cam;
 
-	Quaternion StartingRotation;
 
-	float Ver, Hor, Jump, RotVer, RotHor;
+	float Ver, Hor, Jump;
 	float Speed;
-	float jumpSpeed = 100;
+	float jumpSpeed = 200;
 	bool isGround;
-	public float RunSpeed = 15, StepSpeed = 3, NormalSpeed = 7,sensitivity = 5;  
+	public float RunSpeed = 15, StepSpeed = 3, NormalSpeed = 7;  
     // Start is called before the first frame update
     void Start()
     {
-        StartingRotation = transform.rotation;
+
     }
 
      void OnCollisionStay(Collision collision)
@@ -38,15 +36,6 @@ public class Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    	RotHor += Input.GetAxis("Mouse X");
-    	RotVer += Input.GetAxis("Mouse Y");
-
-    	RotVer = Mathf.Clamp(RotVer, -60, 60);
-
-    	Quaternion RotY = Quaternion.AngleAxis(RotHor, Vector3.up);
-    	Quaternion RotX = Quaternion.AngleAxis(-RotVer, Vector3.right);
-
-    	cam.transform.rotation = StartingRotation * RotY * RotX;
     	if (Input.GetKey(KeyCode.LeftShift))
     	{
     		Speed = RunSpeed;
@@ -66,7 +55,7 @@ public class Control : MonoBehaviour
         	Jump = Input.GetAxis("Jump") * Time.deltaTime * jumpSpeed;
         	GetComponent<Rigidbody>().AddForce(transform.up * Jump, ForceMode.Impulse);
     	}
-    	transform.Translate(new Vector3(Hor, 0, Ver));
+    	transform.Translate(new Vector3(-Hor, 0, -Ver));
 
     }
 }
